@@ -24,6 +24,6 @@ const phoneBookSlice = createSlice({
   },
 });
 
-export const { setContact, setDeletContact, setFilter } =
+export const { setAddContact, setDeletContact, setFilter } =
 phoneBookSlice.actions;
 export const phoneBookReducer = phoneBookSlice.reducer;

@@ -1,11 +1,12 @@
 import css from '../ContactForm/ContactsForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { setContact } from 'redux/contactFormReducer';
+// import { setContact } from 'redux/contactFormReducer';
 import { useState } from 'react';
 import shortid from 'shortid';
+import { setAddContact } from 'redux/phoneBookReducer';
 
 export function ContactForm() {
-  const contacts = useSelector(state => state.contactForm.contacts);
+  const contacts = useSelector(state => state.phoneBook.contacts);
   const [nameValue, setNameValue] = useState('');
   const [numberValue, setNumberValue] = useState('');
 
@@ -39,7 +40,7 @@ export function ContactForm() {
         number: numberValue,
         id: shortid.generate(),
       };
-      dispatch(setContact(newContact));
+      dispatch(setAddContact(newContact));
     }
   };
 

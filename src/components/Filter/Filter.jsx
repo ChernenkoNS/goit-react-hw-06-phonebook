@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilter } from 'redux/contactFormReducer';
+import { setFilter } from 'redux/phoneBookReducer';
 import css from '../Filter/Filter.module.css';
 
 export const Filter = () => {
-  const filter = useSelector(state => state.contactForm.filter);
+  const filter = useSelector(state => state.phoneBook.filter);
 
   const dispatch = useDispatch();
 

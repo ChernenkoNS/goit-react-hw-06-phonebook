@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { setDeletContact } from 'redux/contactFormReducer';
+import { setDeletContact } from 'redux/phoneBookReducer';
+
 import css from '../ContactList/ContactList.module.css';
 
 export const ContactList = () => {
-  const contacts = useSelector(state => state.contactForm.contacts);
-  const filterValue = useSelector(state => state.contactForm.filter);
+  const contacts = useSelector(state => state.phoneBook.contacts);
+  const filterValue = useSelector(state => state.phoneBook.filter);
 
   const dispatch = useDispatch();
 

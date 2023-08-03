@@ -1,6 +1,5 @@
 import css from '../ContactForm/ContactsForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-// import { setContact } from 'redux/contactFormReducer';
 import { useState } from 'react';
 import shortid from 'shortid';
 import { setAddContact } from 'redux/phoneBookReducer';

@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDeletContact } from 'redux/phoneBookReducer';
 
@@ -33,7 +32,3 @@ export const ContactList = () => {
   );
 };
 
-// ContactList.propTypes = {
-//   contacts:  PropTypes.array,
-//   onDeleteContact:PropTypes.func.isRequired
-// };

@@ -1,18 +1,31 @@
-import PropTypes from "prop-types";
-import { useSelector } from "react-redux";
-import css from '../ContactList/ContactList.module.css'
+import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { setDeletContact } from 'redux/contactFormReducer';
+import css from '../ContactList/ContactList.module.css';
 
 export const ContactList = () => {
-  const contacts = useSelector(state =>  state.contactForm.contacts)
+  const contacts = useSelector(state => state.contactForm.contacts);
+  const filterValue = useSelector(state => state.contactForm.filter);
+
+  const dispatch = useDispatch();
+
+  const deleteContact = contactId => {
+    dispatch(setDeletContact(contactId));
+  };
+
+  const validFilterValue = filterValue.toLowerCase();
+  const visibleContacts = contacts.filter(contact =>
+    contact.name.toLowerCase().includes(validFilterValue)
+  );
 
   return (
     <ul>
-      {contacts.map(({ name, number, id }) => (
+      {visibleContacts.map(({ name, number, id }) => (
         <li key={id} className={css.contactsItem}>
           <p>
             {name}: {number}
           </p>
-          {/* <button onClick={() => onDeleteContact(id)}>Delet</button> */}
+          <button onClick={() => deleteContact(id)}>Delet</button>
         </li>
       ))}
     </ul>

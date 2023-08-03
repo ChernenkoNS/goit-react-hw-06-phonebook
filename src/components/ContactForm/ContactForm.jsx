@@ -31,8 +31,6 @@ export function ContactForm() {
   };
 
   const addContactName = (nameValue, numberValue) => {
-    console.log('qqq');
-
     if (checkingUniqueNames(nameValue)) {
       alert(`${nameValue} is already is contacts`);
     } else {
@@ -49,8 +47,6 @@ export function ContactForm() {
     event.preventDefault();
 
     addContactName(nameValue, numberValue);
-
-    console.log(contacts);
 
     setNameValue('');
     setNumberValue('');

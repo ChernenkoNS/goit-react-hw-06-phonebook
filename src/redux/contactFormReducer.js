@@ -1,32 +1,34 @@
 
-import { createSlice } from "@reduxjs/toolkit";
 
 
-const initialState = {
-   contacts: []
-  };
-  
-  const contactFormSlice = createSlice({
-    name: "contactForm",
-    initialState: initialState,
-    reducers: {
+// import { createSlice } from '@reduxjs/toolkit';
 
-        setContact: (state, action) => {
-            const { name, number, id} = action.payload;
-            state.contacts.push({ name, number, id});
-          },
+// const initialState = {
+//   contacts: [],
+//   filter: '',
+// };
 
-    //   setName:  (state, action) => {
-    //     state.name = action.payload
-    //   },
-    //   setNumber:  (state, action) => {
-    //     state.number = action.payload
-    //   }
-    }
-  })
-  
+// const contactFormSlice = createSlice({
+//   name: 'contactForm',
+//   initialState: initialState,
+//   reducers: {
+//     setContact: (state, action) => {
+//       const { name, number, id } = action.payload;
+//       state.contacts.push({ name, number, id });
+//     },
 
-  
-  export const { setContact} = contactFormSlice.actions;
-  export const contactFormReducer = contactFormSlice.reducer;
-  
+//     setDeletContact: (state, action) => {
+//       state.contacts = state.contacts.filter(
+//         contact => contact.id !== action.payload
+//       );
+//     },
+
+//     setFilter: (state, action) => {
+//       state.filter = action.payload;
+//     },
+//   },
+// });
+
+// export const { setContact, setDeletContact, setFilter } =
+//   contactFormSlice.actions;
+// export const contactFormReducer = contactFormSlice.reducer;

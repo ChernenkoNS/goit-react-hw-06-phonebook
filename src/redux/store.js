@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { contactFormReducer } from './contactFormReducer';
+import { phoneBookReducer } from './phoneBookReducer';
 
 
 
@@ -7,5 +8,6 @@ import { contactFormReducer } from './contactFormReducer';
 export const store = configureStore({
   reducer: {
     contactForm: contactFormReducer,
+    phoneBook: phoneBookReducer
   },
 });
